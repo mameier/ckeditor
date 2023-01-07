@@ -54,5 +54,12 @@ module Ckeditor
       offset = (offset_value < 0 ? 0 : offset_value)
       (offset / limit_value) + 1
     end
+
+    # size of collection on current page
+    # needed for notification in Rails 7
+    def size
+      scoped.count
+    end
+    alias length size
   end
 end
