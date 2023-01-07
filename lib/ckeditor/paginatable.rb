@@ -61,5 +61,7 @@ module Ckeditor
       scoped.count
     end
     alias length size
+
+    delegate :each, to: :scoped
   end
 end
